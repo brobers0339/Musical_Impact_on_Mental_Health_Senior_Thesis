@@ -1,1 +1,5 @@
 # Musical_Impact_on_Mental_Health_Senior_Thesis
+
+# Correlational Methods
+## Ordinal Logistic Regression
+### Ordinal Logit Regression is a stat analysis method that explores the relationship between ordinal response variables and one or more explanatory variables. The ordinal variable, in this case the variable responsible for tracking the improved/worsened feeling of mental health after music, is a categorical variable with clear category levels. The explanatory variables are the variables that might influence or cause the ordinal one, which in this case is the various variables recorded during music interaction as well as the reported mental health symptoms. This regressional analysis will help with determining correlation between the different explanatory variables that are affecting the interaction between music and mental health and the categorical variables that measure that interaction.
