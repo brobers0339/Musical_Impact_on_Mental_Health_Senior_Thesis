@@ -1,6 +1,6 @@
 # Musical_Impact_on_Mental_Health_Senior_Thesis
 
-#Overview
+# Overview
 ## The code first conducts proper cleaning techniques on the given dataset, Music & Mental Health Survey Results, including dropping unnecessary columns such as Foreign Language and age, adding an observation count column, and remapping the Music_effects column in order to be properly utilized in the below correltional analysis methods. After cleaning is completed, the two analysis methods described below are deployed. 
 
 # Correlational Methods
