@@ -131,6 +131,7 @@ spearman_df = pd.DataFrame(spearman_matrix)
 
 spearman_df.to_csv('spearman_correlation.csv', index=False)
 
+#Spearman's Correlation Visualizations
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
@@ -150,4 +151,14 @@ sns.barplot(x='SpearmanR', y='Category', data=df, palette='vlag')
 plt.axvline(0, color='k', linewidth=0.8)
 plt.xlabel("Spearman's rho")
 plt.title("Spearman Correlations by Category")
+plt.tight_layout()
+
+#Ordinal Logistical Regression Visualizations
+df = model_df[(model_df['Category'] != '0/1') & (model_df['Category'] != '1/2') & (model_df['Category'] != '2/3')]
+df= df.sort_values('Coef')
+plt.figure(figsize=(8,6))
+sns.barplot(x='Coef', y='Category', data=df, palette='vlag')
+plt.axvline(0, color='k', linewidth=0.8)
+plt.xlabel("Ordinal Logistic Regression Coefficient")
+plt.title("Ordinal Logistic Regression Correlations by Category")
 plt.tight_layout()
