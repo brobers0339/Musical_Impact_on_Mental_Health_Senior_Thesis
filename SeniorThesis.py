@@ -130,3 +130,24 @@ for col in df_explanatory_cols:
 spearman_df = pd.DataFrame(spearman_matrix)
 
 spearman_df.to_csv('spearman_correlation.csv', index=False)
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import plotly.express as px
+df = spearman_df.sort_values('SpearmanR')
+plt.figure(figsize=(8,6))
+plt.hlines(y=df['Category'], xmin=0, xmax=df['SpearmanR'], color='lightgray')
+plt.scatter(df['SpearmanR'], df['Category'], c=df['SpearmanR'], cmap='coolwarm', s=80)
+plt.axvline(0, color='k', linewidth=0.8)
+plt.xlabel("Spearman's rho")
+plt.title("Lollipop: Spearman Correlations")
+plt.tight_layout()
+
+df = spearman_df.sort_values('SpearmanR')
+plt.figure(figsize=(8,6))
+sns.barplot(x='SpearmanR', y='Category', data=df, palette='vlag')
+plt.axvline(0, color='k', linewidth=0.8)
+plt.xlabel("Spearman's rho")
+plt.title("Spearman Correlations by Category")
+plt.tight_layout()
